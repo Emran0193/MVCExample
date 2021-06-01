@@ -1,0 +1,55 @@
+﻿@model MVCExample.Models.Employee
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmpName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpSalary)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmpSalary)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tds)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tds)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NetSalary)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NetSalary)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JoiningDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JoiningDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.EmpId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
